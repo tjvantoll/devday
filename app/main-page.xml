@@ -1,0 +1,31 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:lv="nativescript-telerik-ui-pro/listview"
+  loaded="pageLoaded" class="page">
+
+  <ActionBar title="{N} Developer Day" class="action-bar"></ActionBar>
+
+  <GridLayout>
+    <lv:RadListView id="listview" class="list-group" items="{{ data }}" swipeActions="true">
+        <lv:RadListView.listViewLayout>
+          <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="75" itemInsertAnimation="Default" />
+        </lv:RadListView.listViewLayout>
+        <lv:RadListView.itemSwipeTemplate>
+          <GridLayout columns="auto, *, auto">
+            <StackLayout col="0" class="save-btn" tap="onLeftSwipe" orientation="horizontal">
+              <Label text="Save" verticalAlignment="center" horizontalAlignment="center"/>
+            </StackLayout>
+            <StackLayout col="1" backgroundColor="white"></StackLayout>
+            <StackLayout col="2" class="delete-btn" tap="onRightSwipe" orientation="horizontal">
+              <Label text="Delete" verticalAlignment="center" horizontalAlignment="center" />
+            </StackLayout>
+          </GridLayout>
+        </lv:RadListView.itemSwipeTemplate>
+        <lv:RadListView.itemTemplate>
+            <StackLayout class="list-group-item">
+              <Label text="{{ name }}" class="list-group-item-heading" />
+              <Label text="{{ desc }}" textWrap="true" class="list-group-item-text" />
+            </StackLayout>
+        </lv:RadListView.itemTemplate>
+    </lv:RadListView>
+  </GridLayout>
+</Page>

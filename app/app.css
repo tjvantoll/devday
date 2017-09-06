@@ -1,0 +1,14 @@
+﻿@import "nativescript-theme-core/css/core.light.css";
+
+.sidedrawer-header {
+  background-color: blue;
+  height: 55;
+  margin-bottom: 10;
+}
+.sidedrawer-header Label {
+  color: white;
+  font-size: 20;
+}
+.sidedrawer-content Label {
+  margin: 10 20;
+}
