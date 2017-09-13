@@ -1,5 +1,4 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"
-  xmlns:gauge="nativescript-telerik-ui-pro/gauges"
   loaded="pageLoaded" class="page">
 
   <ActionBar title="{N} Developer Day" class="action-bar"></ActionBar>
